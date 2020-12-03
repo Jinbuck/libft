@@ -6,7 +6,7 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 00:47:36 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/03 01:54:22 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/03 11:28:14 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t		ft_strlen(const char *ap_str)
 {
-	int		len;
+	size_t	len;
 
 	len = 0;
 	while (ap_str[len])

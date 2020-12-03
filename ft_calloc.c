@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 01:55:11 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/03 11:27:05 by mjin             ###   ########.fr       */
+/*   Created: 2020/12/03 22:40:57 by mjin              #+#    #+#             */
+/*   Updated: 2020/12/03 22:55:39 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *ap_dst, const char *ap_src, size_t a_dst_size)
+void	*ft_calloc(size_t a_count, size_t a_size)
 {
-	size_t	i;
-	size_t	src_len;
+	char *p_ret;
 
-	if (ap_dst == 0 || ap_src == 0)
-		return (0);
-	src_len = ft_strlen(ap_src);
-	i = 0;
-	while (i + 1 < a_dst_size && ap_src[i])
-	{
-		ap_dst[i] = ap_src[i];
-		i++;
-	}
-	if (a_dst_size)
-		dest[i] = 0;
-	return (src_len);
+	if (!(p_ret = (char *)malloc(a_count * a_size)))
+		return (NULL);
+	ft_memset(p_ret, 0, a_count * a_size);
+	return (p_ret);
 }

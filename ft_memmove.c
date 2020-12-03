@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 01:55:11 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/03 11:27:05 by mjin             ###   ########.fr       */
+/*   Created: 2020/12/03 16:34:15 by mjin              #+#    #+#             */
+/*   Updated: 2020/12/03 17:57:54 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *ap_dst, const char *ap_src, size_t a_dst_size)
+void	*ft_memmove(void *ap_dst, const void *ap_src, size_t a_num)
 {
-	size_t	i;
-	size_t	src_len;
+	unsigned char	*p_dst_pos;
+	unsigned char	*p_src_pos;
+	size_t			i;
 
-	if (ap_dst == 0 || ap_src == 0)
-		return (0);
-	src_len = ft_strlen(ap_src);
+	p_dst_pos = ap_dst;
+	p_src_pos = (unsigned char *)ap_src;
 	i = 0;
-	while (i + 1 < a_dst_size && ap_src[i])
+	if (p_src_pos < p_dst_pos)
 	{
-		ap_dst[i] = ap_src[i];
-		i++;
+		while (i < a_num)
+		{
+			p_dst_pos[a_num - i - 1] = p_src_pos[a_num - i - 1];
+			i++;
+		}
 	}
-	if (a_dst_size)
-		dest[i] = 0;
-	return (src_len);
+	else if (p_src_pos > p_dst_pos)
+	{
+		while (i < a_num)
+		{
+			p_dst_pos[i] = p_src_pos[i];
+			i++;
+		}
+	}
+	return (ap_dst);
 }

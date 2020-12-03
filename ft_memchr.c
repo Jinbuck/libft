@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 01:55:11 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/03 11:27:05 by mjin             ###   ########.fr       */
+/*   Created: 2020/12/03 21:50:36 by mjin              #+#    #+#             */
+/*   Updated: 2020/12/03 22:01:03 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *ap_dst, const char *ap_src, size_t a_dst_size)
+int		ft_memchr(const void *ap_str, int a_ch, size_t a_num)
 {
-	size_t	i;
-	size_t	src_len;
+	unsigned char	*p_str_pos;
+	size_t			i;
 
-	if (ap_dst == 0 || ap_src == 0)
-		return (0);
-	src_len = ft_strlen(ap_src);
+	p_str_pos = (unsigned char *)ap_str;
 	i = 0;
-	while (i + 1 < a_dst_size && ap_src[i])
+	while (i < a_num)
 	{
-		ap_dst[i] = ap_src[i];
+		if (p_str_pos[i] == (unsigned char)a_ch)
+			return (p_str_pos + i);
 		i++;
 	}
-	if (a_dst_size)
-		dest[i] = 0;
-	return (src_len);
+	return (NULL);
 }

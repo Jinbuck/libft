@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 01:55:11 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/03 11:27:05 by mjin             ###   ########.fr       */
+/*   Created: 2020/12/03 13:56:08 by mjin              #+#    #+#             */
+/*   Updated: 2020/12/03 14:02:31 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *ap_dst, const char *ap_src, size_t a_dst_size)
+char	*ft_strrchr(const char *ap_str, int a_ch)
 {
-	size_t	i;
-	size_t	src_len;
+	int	i;
 
-	if (ap_dst == 0 || ap_src == 0)
-		return (0);
-	src_len = ft_strlen(ap_src);
-	i = 0;
-	while (i + 1 < a_dst_size && ap_src[i])
+	i = (int)ft_strlen(ap_str) + 1;
+	while (i--)
 	{
-		ap_dst[i] = ap_src[i];
-		i++;
+		if (ap_str[i] == (char)a_ch)
+			return ((char *)ap_str + i);
 	}
-	if (a_dst_size)
-		dest[i] = 0;
-	return (src_len);
+	return (NULL);
 }

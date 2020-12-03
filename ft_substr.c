@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/03 01:55:11 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/03 11:27:05 by mjin             ###   ########.fr       */
+/*   Created: 2020/12/04 00:08:41 by mjin              #+#    #+#             */
+/*   Updated: 2020/12/04 00:44:13 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *ap_dst, const char *ap_src, size_t a_dst_size)
+char	*ft_substr(char const *ap_str, unsigned int a_start, size_t a_len)
 {
+	char	*p_str;
 	size_t	i;
-	size_t	src_len;
 
-	if (ap_dst == 0 || ap_src == 0)
-		return (0);
-	src_len = ft_strlen(ap_src);
+	if (ap_str == 0)
+		return (NULL);
+	if (a_start >= ft_strlen(ap_str))
+		return (ft_strdup(""));
+	if (!(p_str = (char *)malloc(sizeof(char) * (a_len + 1))))
+		return (NULL);
 	i = 0;
-	while (i + 1 < a_dst_size && ap_src[i])
+	while (ap_str[i] && i < len)
 	{
-		ap_dst[i] = ap_src[i];
+		p_str[i] = ap_str[a_start];
 		i++;
+		a_start++;
 	}
-	if (a_dst_size)
-		dest[i] = 0;
-	return (src_len);
+	p_str[i] = 0;
+	return (p_str);
 }
