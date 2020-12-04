@@ -6,7 +6,7 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 15:09:10 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 15:12:15 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 23:41:45 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstdelone(t_list *ap_lst, void (*ap_del)(void *))
 {
 	if (ap_lst)
 	{
-		del(ap_lst->content);
-		free(lst);
+		ap_del(ap_lst->content);
+		free(ap_lst);
 	}
 }

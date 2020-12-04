@@ -6,13 +6,13 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 14:58:00 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 14:59:48 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/05 01:52:37 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		f_lstsize(t_list *ap_lst)
+int		ft_lstsize(t_list *ap_lst)
 {
 	int	size;
 

@@ -6,7 +6,7 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 11:24:23 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 17:03:09 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 23:46:11 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int		ft_wordcount(char const *ap_str, char a_ch)
 {
 	int	count;
 	int	i;
-	
+
 	count = 0;
 	i = 0;
 	while (ap_str[i])
