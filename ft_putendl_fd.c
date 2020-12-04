@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/02 01:10:22 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 16:34:24 by mjin             ###   ########.fr       */
+/*   Created: 2020/12/04 14:09:57 by mjin              #+#    #+#             */
+/*   Updated: 2020/12/04 14:17:10 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int a_ch)
+void	ft_putendl_fd(char *ap_str, int a_fd)
 {
-	return (a_ch >= '0' && a_ch <= '9');
+	write(a_fd, ap_str, ft_strlen(ap_str));
+	write(a_fd, "\n", 1);
 }

@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/02 01:10:22 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 16:34:24 by mjin             ###   ########.fr       */
+/*   Created: 2020/12/04 15:33:13 by mjin              #+#    #+#             */
+/*   Updated: 2020/12/04 15:46:41 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int a_ch)
+void	ft_lstiter(t_list *ap_lst, void (*ap_f)(void *))
 {
-	return (a_ch >= '0' && a_ch <= '9');
+	while (ap_lst)
+	{
+		ap_f(ap_lst->content);
+		ap_lst = ap_lst->next;
+	}
 }
