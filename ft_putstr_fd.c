@@ -6,7 +6,7 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 14:08:46 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 14:09:42 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 16:56:32 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putstr_fd(char *ap_str, int a_fd)
 {
-	write(fd, ap_str, ft_strlen(ap_str));
+	write(a_fd, ap_str, ft_strlen(ap_str));
 }

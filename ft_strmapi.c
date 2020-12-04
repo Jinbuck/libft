@@ -6,7 +6,7 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 13:59:51 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 14:18:55 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 17:12:52 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ char	*ft_strmapi(char const *ap_str, char (*ap_f)(unsigned int, char))
 		p_str[i] = ap_f(i, ap_str[i]);
 		i++;
 	}
-	str[i] = 0;
+	p_str[i] = 0;
 	return (p_str);
 }

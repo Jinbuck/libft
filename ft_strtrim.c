@@ -6,7 +6,7 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 00:59:22 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 01:59:44 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 17:15:34 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ char	*ft_strtrim(char const *ap_str, char const *ap_set)
 
 	start = 0;
 	end = ft_strlen(ap_str);
-	while (ap_str[start] && ft_checkset(ap_str[start], set))
+	while (ap_str[start] && ft_checkset(ap_str[start], ap_set))
 		start++;
-	while (end > start && ft_checkset(ap_str[end - 1], set))
+	while (end > start && ft_checkset(ap_str[end - 1], ap_set))
 		end--;
 	if (!(p_str = (char *)malloc(sizeof(char) * (end - start + 1))))
 		return (NULL);

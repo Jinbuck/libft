@@ -6,13 +6,13 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 21:50:36 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/03 22:01:03 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 17:19:11 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memchr(const void *ap_str, int a_ch, size_t a_num)
+void	*ft_memchr(const void *ap_str, int a_ch, size_t a_num)
 {
 	unsigned char	*p_str_pos;
 	size_t			i;

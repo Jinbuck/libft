@@ -6,13 +6,13 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 11:30:29 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/03 12:04:25 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 17:09:49 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlcat(char *ap_dst, const char *ap_src, size_t a_dst_size)
+size_t		ft_strlcat(char *ap_dst, const char *ap_src, size_t a_dst_size)
 {
 	size_t	i;
 	size_t	j;

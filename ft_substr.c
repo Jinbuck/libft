@@ -6,7 +6,7 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 00:08:41 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 00:44:13 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 17:15:54 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *ap_str, unsigned int a_start, size_t a_len)
 	if (!(p_str = (char *)malloc(sizeof(char) * (a_len + 1))))
 		return (NULL);
 	i = 0;
-	while (ap_str[i] && i < len)
+	while (ap_str[i] && i < a_len)
 	{
 		p_str[i] = ap_str[a_start];
 		i++;

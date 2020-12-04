@@ -6,7 +6,7 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 00:44:28 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 00:58:59 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 17:08:30 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ char	*ft_strjoin(char const *ap_str1, char const *ap_str2)
 		j++;
 	}
 	p_str[i] = 0;
-	return (str);
+	return (p_str);
 }

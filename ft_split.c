@@ -6,7 +6,7 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 11:24:23 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/04 11:53:50 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 17:03:09 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,33 @@ char	**ft_makelist(char **ap_list, char const *ap_str, char a_ch, int a_cnt)
 	return (ap_list);
 }
 
+int		ft_wordcount(char const *ap_str, char a_ch)
+{
+	int	count;
+	int	i;
+	
+	count = 0;
+	i = 0;
+	while (ap_str[i])
+	{
+		if (ap_str[i] == a_ch)
+			i++;
+		else
+		{
+			count++;
+			while (ap_str[i] && ap_str[i] != a_ch)
+				i++;
+		}
+	}
+	return (count);
+}
+
 char	**ft_split(char const *ap_str, char a_ch)
 {
 	int		count;
 	char	**p_word_list;
 
-	count = ft_word_count(ap_str, a_ch);
+	count = ft_wordcount(ap_str, a_ch);
 	if (!(p_word_list = (char **)malloc(sizeof(char *) * (count + 1))))
 		return (NULL);
 	ft_makelist(p_word_list, ap_str, a_ch, count);

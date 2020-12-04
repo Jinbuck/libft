@@ -6,7 +6,7 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 22:03:04 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/03 22:38:36 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 17:14:22 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int		ft_memcmp(const void *ap_base1, const void *ap_base2, size_t a_num)
 			return (p_base1[i] - p_base2[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }

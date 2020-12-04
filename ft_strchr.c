@@ -6,11 +6,11 @@
 /*   By: mjin <mjin@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 13:55:35 by mjin              #+#    #+#             */
-/*   Updated: 2020/12/03 14:01:44 by mjin             ###   ########.fr       */
+/*   Updated: 2020/12/04 17:03:32 by mjin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
 char	*ft_strchr(const char *ap_str, int a_ch)
 {
